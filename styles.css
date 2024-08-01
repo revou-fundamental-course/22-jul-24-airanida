@@ -1,0 +1,359 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Pastikan header berada di atas elemen lain */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #f4f4f4;
+    padding: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    margin-right: 30px;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.intro, .testimonial, .contact, .features {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.intro h1 {
+    font-size: 2em;
+}
+
+.intro p {
+    display: flex;
+}
+
+.container1 {
+    display: flex;
+    justify-content: center; /* Atur jarak antara elemen */
+    gap: 10px;
+    margin: 5%;
+    flex-wrap: wrap;
+}
+
+.testimonial-container {
+    display: flex;
+    max-width: 60%;
+    overflow: hidden;
+}
+
+.testimonial-wrapper {
+    display: flex;
+    transition: transform 1.5s;
+}
+
+.testimonial {
+    max-width: 700px;
+    width: 80%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-placeholder {
+    width: 600px;
+    height: 400px;
+    background: #ccc;
+    border-radius: 5px;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+  
+.avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+  
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.details h2 {
+    margin: 0;
+    font-size: 18px;
+}
+  
+.details p {
+    margin: 0;
+    color: #888;
+}
+  
+.contact {
+    max-width: 350px; /* Atur lebar sesuai kebutuhan */
+    padding: 15px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    background-color: #f9f9f9;
+    justify-content: center;
+}  
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select, form button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.features {
+    margin: 20%;
+    margin-top: 30px;
+}
+
+.feature-list {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.feature-item:last-child {
+    margin-bottom: 0;
+}
+
+.feature-number {
+    background-color: #eeeeee;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 15px;
+    color: #333;
+}
+
+.feature-text {
+    flex: 1;
+    line-height: 1.5;
+}
+
+.packageHead {
+    max-width: screen;
+    height: 150px;
+    display: flex;
+    background: #ccc;
+    justify-content: center;
+    align-items: center;
+}
+
+.packageHead h1 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.package {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+/* Media query to stack cards vertically on smaller screens */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 40px);
+    }
+}
+
+.icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+.callUs {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.callUs h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.callUs p {
+    font-size: 1em;
+    color: #666;
+    margin: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.cta-button {
+    background-color: #333;
+    color: #fff;
+    width: auto;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.cta-button:hover {
+    background-color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container1 {
+        flex-direction: column; /* Menumpuk secara vertikal pada layar kecil */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact {
+        width: calc(80%); /* Atur lebar sesuai ruang yang tersedia */
+    }
+
+    .testimonial-container {
+        max-width: 500px; /* Pastikan elemen tidak melebihi lebar kontainer */
+        transform: scale(1); /* Jangan ubah skala elemen, biarkan ukuran aslinya */
+    }
+
+    .testimonial {
+        transform: scale(0.4);
+        width: 300px; /* Mobile width */
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-container, .contact {
+        width: calc(80%); /* Atur lebar sesuai ruang yang tersedia */
+    }
+}
